@@ -1,0 +1,30 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+
+/* Custom styles for forms */
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Custom styles for alerts */
+.alert {
+    margin-top: 20px;
+}

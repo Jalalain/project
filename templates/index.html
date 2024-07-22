@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Dashboard
+{% endblock %}
+
+{% block main %}
+    <h1>Dashboard</h1>
+
+    <table class="table table-bordered table-striped">
+        <thead class="thead-light">
+            <tr>
+                <th>Category</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in entries %}
+                <tr>
+                    <td>{{ entry.category }}</td>
+                    <td>{{ entry.type }}</td>
+                    <td>{{ entry.amount }}</td>
+                    <td>{{ entry.date }}</td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <td colspan="3" align="right">Total Income</td>
+                <td>{{ total_income }}</td>
+            </tr>
+            <tr>
+                <td colspan="3" align="right">Total Expenses</td>
+                <td>{{ total_expenses }}</td>
+            </tr>
+            <tr>
+                <td colspan="3" align="right">Net Balance</td>
+                <td>{{ net_balance }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
