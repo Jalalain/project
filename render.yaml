@@ -3,7 +3,6 @@ services:
     name: personal-finance-tracker
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn app:app"
-    envVars:
-      - key: FLASK_ENV
-        value: production
+    startCommand: "bash start_web.sh"
+    plan: free
+    autoDeploy: true
